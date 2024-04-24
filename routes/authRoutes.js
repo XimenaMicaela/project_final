@@ -7,6 +7,10 @@ const router = express.Router();
 
 const authController = require("../controllers/authController");
 
+// Imoprtamos el middleware de Seguridad
+
+const verifyToken= require("../middleware/verifyToken")
+
 // Rutas para al Auth del User.
 
 router.post("/login", authController.login);
