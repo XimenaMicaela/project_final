@@ -14,6 +14,9 @@ const verifyToken= require("../middleware/verifyToken")
 // Rutas para al Auth del User.
 
 router.post("/login", authController.login);
-router.get("/logout", authController.logout);
+
+// Ruta para cerrar Sesion
+
+router.post("/logout", verifyToken, authController.logout);
 
 module.exports = router;
