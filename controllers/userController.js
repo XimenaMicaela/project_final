@@ -11,7 +11,7 @@ function getAllUsers(req, res) {
     .then((users) => res.status(200).json(users)) // Enviamos todos los usuarios como respuesta.
     .catch((err) => {
       console.error(err);
-      res.status(500).send("Error al obtener usuarios"); // En caso de tener error que envie un mensaje al cliente.
+      res.status(500).send("Error al obtener usuarios"); // En caso de error que envie un mensaje al cliente.
     });
 }
 
